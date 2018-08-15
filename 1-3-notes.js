@@ -95,5 +95,9 @@ var dogFood = Object.assign(cat, tuna)
 
 cat.name = "Ruffles"// If we update cat.name, we will also be updating dogFood.name to the new value. If this confuses you read the comment directly above. 
 
+var dogFood2 = Object.assign({}, cat, tuna)// If you really want to copy, you need to remeber to *** add the EMPTY object first ***. That way we dont make changes to all copies. We just change the ones we want to.
+
+
+
 
 
