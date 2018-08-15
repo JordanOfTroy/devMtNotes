@@ -29,3 +29,16 @@ var ages2017 = ages2016.map(function (element) {
 // .map works just like .forEach, but will return a new value. Think of .map as creating a new empty array, and puts the vlues in there one at a time.
 // var ages2017 will equal [54, 51, 30, 23, 17], and will be a separate var from ages2016.
 
+var names = ["Susis", "Ben", "Mark", "Franklin"] // given array
+
+var shortNames = names.filter(function (val, i, arr) {
+  return val.length < 5 // The function that gets used with .filter should return true or false. 
+})
+// .filter will irriate through an array and check each value against the function. If the value return true, the value will be passed into a new empty array. .filter, like .map works by creating an empty array and pushing values to it.
+// var shortNames will be assigned a vaule of ["Ben", "Mark"] for this example.
+
+
+
+
+
+
