@@ -1,1 +1,1 @@
-// this is a test
+// This is test tree. It seems to be working now. I am just goign to use the terminal for now, and the GUI way of pushing to Git isnt all that clear to me. I liek the terminal anyway and I need to get used to using it on a regualr basis. Besides, it feel more "code-ish".
