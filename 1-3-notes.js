@@ -37,8 +37,63 @@ var shortNames = names.filter(function (val, i, arr) {
 // .filter will irriate through an array and check each value against the function. If the value return true, the value will be passed into a new empty array. .filter, like .map works by creating an empty array and pushing values to it.
 // var shortNames will be assigned a vaule of ["Ben", "Mark"] for this example.
 
+myObj = {
+  code: "awesome",
+  boredom: "lame"
+}
 
+delete myObj.boredom // delete key word, followed by the object we want to delete from "dot" the property we want to remove.
 
+var work = {
+  sucess: "great",
+  mistake: "woops"
+}
+
+work.mistake = undefined // this would only change the value of mistake. var work would return {sucess: "great", mistake: undefined}.
+
+delete work.mistake // this will remove that property from the object completely. var work would then retrun {sucess: "great"}. Do you see the difference? 
+
+delete work['success'] // you can also use bracket notation to remove properties. var work would now return an empty object, { }.
+
+var backpack = {
+  oldLaptop: "slow", 
+  oldLunch: "moldy",
+  pencil: "sharp"
+} // given object
+
+var oldStuff = ["oldLaptop", "oldLunch"] // given array
+
+for ( var i = 0; i < oldStuff.length; i++) {
+  delete backpack[ oldStuff[i] ]
+} // a for loop has been created to go through the given object and remove all items within the array. Note that bracket notation has been used. *** This is important when passing in variables in as parameters. ***
+// This for loop eill return {pencil: "sharp"} for the value of var backpack.
+
+var obj = {
+  name: "Joseph"
+} // given object
+
+var obj2 = obj // this DOES NOT make a copy of var obj. It set the value of var obj2 equal to the vlaue of obj. They will be one in the same. 
+
+obj.name = "Joe"
+// if we update name in obj, it will also update that same parameter in obj2. Therefore, obj2.name will also have an updated value of "Joe". Do you see why this may cause problems?
+
+var obj3 = Object.assign({}, obj) // Object.assign (*** capital "O" ***) is a built-in JS construct. The parameters are what we want to assign the object TO (can be an empty onject as shown, or another existing object), and what we want to copy FROM (can be multiple objects seperated by commas)
+// obj.name = "Sue"
+// obj3.name = "Joseph"
+// If we update obj.name, obj3.name will remain unchaned as it is a copy. 
+
+var cat = {
+  name: "Fluffles"
+}
+
+var tuna = {
+  container: "can"
+}
+
+var dogFood = Object.assign(cat, tuna)
+// final result will be a nerging of the two objects. cat got updated to {name: "Fluffles", container: "can"}. And now, var dogFood is equal to the new cat object as well. 
+
+cat.name = "Ruffles"// If we update cat.name, we will also be updating dogFood.name to the new value. If this confuses you read the comment directly above. 
 
 
 
