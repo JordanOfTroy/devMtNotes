@@ -99,5 +99,25 @@ var dogFood2 = Object.assign({}, cat, tuna)// If you really want to copy, you ne
 
 
 
+//=================== Lecture notes =======================================
 
+// for in loops
+// for (.... in .....) {}
+// for (var key in ...) {}
+// for (var key in object) {}
+
+var obj = {
+  x: 7,
+  y: 2,
+  z: 2
+}
+
+for (var key in obj) {
+  key === x / y / z
+}
+
+for (var key in obj) {
+  var value = obj[key] // key is a string representing each 1 a
+  
+}
 
