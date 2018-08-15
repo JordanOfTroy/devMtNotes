@@ -27,5 +27,5 @@ var ages2017 = ages2016.map(function (element) {
   return element + 1
 })
 // .map works just like .forEach, but will return a new value. Think of .map as creating a new empty array, and puts the vlues in there one at a time.
-// 
+// var ages2017 will equal [54, 51, 30, 23, 17], and will be a separate var from ages2016.
 
