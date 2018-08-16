@@ -93,11 +93,19 @@ var tuna = {
 var dogFood = Object.assign(cat, tuna)
 // final result will be a nerging of the two objects. cat got updated to {name: "Fluffles", container: "can"}. And now, var dogFood is equal to the new cat object as well. 
 
-cat.name = "Ruffles"// If we update cat.name, we will also be updating dogFood.name to the new value. If this confuses you read the comment directly above. 
+cat.name = "Pookie"// If we update cat.name, we will also be updating dogFood.name to the new value. If this confuses you read the comment directly above. 
 
 var dogFood2 = Object.assign({}, cat, tuna)// If you really want to copy, you need to remeber to *** add the EMPTY object first ***. That way we dont make changes to all copies. We just change the ones we want to.
 
+var favorites = {
+  color: "red",
+  flavor: "vanilla"
+} // given object
 
+for (var prop in favorites) {
+  console.log(favorites[prop])
+} // var prop will represent the key from the object, one at a time. in the above example: the value of prop in the first ittiration would be 'color'. The second time through it would be 'flavor' 
+// *** It is very common to use bracket notation becasue prop is always a string. brackets all us to pass in a varable as a string. *** 
 
 //=================== Lecture notes =======================================
 
@@ -105,6 +113,7 @@ var dogFood2 = Object.assign({}, cat, tuna)// If you really want to copy, you ne
 // for (.... in .....) {}
 // for (var key in ...) {}
 // for (var key in object) {}
+// ******* THINK OF 'KEY' AD 'I' IN A FOR LOOP ********
 
 var obj = {
   x: 7,
@@ -118,6 +127,17 @@ for (var key in obj) {
 
 for (var key in obj) {
   var value = obj[key] // key is a string representing each 1 a
-  
+
+}// ******* Write code below ******* 
+/*Problem
+Create a function called truthyFalsy that takes a destructured object as it's parameter.The properties of this object will be number and string. One of these properties will be truthy, the other will be falsy. Return the value that is truthy. */   
+
+var truthyFalsy = ({number, string}) => {
+  if (number) {
+    return number
+  } else if (string) {
+    return string
+  }
+  //return number || string; - *** This one line repkaces the entire if statement abovt!
 }
 
